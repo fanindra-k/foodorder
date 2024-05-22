@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" src="./styles.css" />
+    <title>Welcome to ASHOK SINGH'S HOTEL</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="bg-[#151515] text-white flex items-center justify-between px-4 py-2 lg:px-10"
+      >
+        <div class="flex items-center justify-center">
+          <img class="w-10 mx-2" src="./images/brandLogo.png" alt="Logo" />
+          <p class="uppercase font-bold text-lg lg:text-xl">ASHOK SINGH'S HOTEL</p>
+        </div>
+
+        <button class="menu-toggle lg:hidden">
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+
+        <ul class="hidden lg:flex justify-center items-center gap-8">
+          <li><a class="hover:text-[#F2613F]" href="/">Home</a></li>
+          <li><a class="hover:text-[#F2613F]" href="/orders">Orders</a></li>
+          <li><a class="hover:text-[#F2613F]" href="/menu">Products</a></li>
+          <li><a class="hover:text-[#F2613F]" href="/about">About us</a></li>
+        </ul>
+
+        <% if (!currentUser) { %>
+          <li class="list-none"><a href="/login"  class="list-none bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 rounded">Login</a></li>
+          <li class="list-none"><a href="/register"     class="list-none bg-[#F2613F] hover:bg-[#9B3922] text-black font-bold py-2 px-3 rounded">Sign Up</a></li>
+      <% } else { %>
+          <li class="list-none">Welcome, <%= currentUser.name %> | <span class="text-indigo-500">Order Total :</span>  Rs.<%= total  %></li>
+          <li class="list-none"><a href="/logout"     class="list-none bg-[#F2613F] hover:bg-[#9B3922] text-black font-bold py-2 px-3 rounded">Logout</a></li>
+      <% } %>
+
+       
+
+        
+      </nav>
+
+      <div class="mobile-menu lg:hidden">
+        <ul class="bg-[#151515] text-white text-center py-2">
+          <li class="block hover:text-[#F2613F]"><a href="/">Home</a></li>
+          <li class="block hover:text-[#F2613F]">
+            <a href="/orders">Orders</a>
+          </li>
+          <li class="block hover:text-[#F2613F]">
+            <a href="/menu">Products</a>
+          </li>
+          <li class="block hover:text-[#F2613F]">
+            <a href="/about">About us</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+ 

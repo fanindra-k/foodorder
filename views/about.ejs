@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans">
+    <header>
+      <nav
+        class="bg-[#151515] text-white flex items-center justify-between px-4 py-2 lg:px-10"
+      >
+        <div class="flex items-center justify-center">
+          <img class="w-10 mx-2" src="./brandLogo.png" alt="Logo" />
+          <p class="uppercase font-bold text-lg lg:text-xl">Shop Shuttle</p>
+        </div>
+
+        <button class="menu-toggle lg:hidden">
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+
+        <ul class="hidden lg:flex justify-center items-center gap-8">
+          <li><a class="hover:text-[#F2613F]" href="/">Home</a></li>
+          <li><a class="hover:text-[#F2613F]" href="/orders">Orders</a></li>
+          <li><a class="hover:text-[#F2613F]" href="/menu">Products</a></li>
+          <li><a class="hover:text-[#F2613F]" href="/about">About us</a></li>
+        </ul>
+
+        <div class="flex gap-3">
+          <button
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-3 rounded"
+          >
+            Login
+          </button>
+          <button
+            class="bg-[#F2613F] hover:bg-[#9B3922] text-black font-bold py-2 px-3 rounded"
+          >
+            Sign up
+          </button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu hidden lg:hidden">
+        <ul class="bg-[#151515] text-white text-center py-2">
+          <li class="block hover:text-[#F2613F]"><a href="/">Home</a></li>
+          <li class="block hover:text-[#F2613F]">
+            <a href="/orders">Orders</a>
+          </li>
+          <li class="block hover:text-[#F2613F]">
+            <a href="/menu">Products</a>
+          </li>
+          <li class="block hover:text-[#F2613F]">
+            <a href="/about">About us</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-0 py-8">
+      <section id="about" class="mb-8">
+        <h2 class="text-2xl font-bold mb-4">About Us</h2>
+        <p class="text-lg">
+          This Privacy Policy governs the manner in which
+          <strong>Shop Shuttle</strong> collects, uses, maintains, and discloses
+          information collected from users (each, a "User") of the Shop Shuttle
+          website. This privacy policy applies to the Site and all products and
+          services offered by [Your E-commerce Website].
+        </p>
+        <h3 class="text-lg font-bold my-5">
+          Collection of Personal Identification Information
+        </h3>
+
+        <p class="text-lg">
+          Shop Shuttle may collect personal identification information from
+          users in various ways, including but not limited to when users visit
+          the Site, register on the Site, place an order, subscribe to the
+          newsletter, respond to a survey, fill out a form, and in connection
+          with other activities, services, features, or resources we make
+          available on our Site. Users may be asked for their name, email
+          address, mailing address, phone number, and payment information. Users
+          may, however, visit our Site anonymously. We will collect personal
+          identification information from users only if they voluntarily submit
+          such information to us.
+        </p>
+      </section>
+
+      <!-- Privacy Policy Section -->
+      <section id="privacy-policy" class="mb-8">
+        <h2 class="text-2xl font-bold mb-4">Privacy Policy</h2>
+        <p class="text-lg">
+          This Privacy Policy governs the manner in which Shop Shuttle ("we" or
+          "our") collects, uses, maintains, and discloses information collected
+          from users (each, a "User") of the shop shuttle website ("Site"). This
+          privacy policy applies to the Site and all products and services
+          offered by [Your E-commerce Website].
+        </p>
+      </section>
+
+      <!-- Terms of Service Section -->
+      <section id="terms-of-service" class="mb-8">
+        <h2 class="text-2xl font-bold mb-4">Terms of Service</h2>
+        <p class="text-lg">
+          The Privacy Policy of Shop Shuttle outlines the procedures for
+          collecting, using, maintaining, and disclosing personal identification
+          information obtained from users of the Site. By accessing or utilizing
+          the Site's products and services, users consent to the terms set forth
+          in this policy, which governs the handling of personal data in
+          accordance with legal requirements and best practices. The Terms of
+          Service provide guidelines for using the Site, including restrictions
+          on modifying materials, disclaimers of warranties, limitations of
+          liability, and provisions for governing law. Users agree to abide by
+          these terms upon accessing the Site, acknowledging that Shop Shuttle
+          may modify the terms at its discretion without prior notice.
+          Compliance with these policies and terms ensures transparency,
+          security, and legal adherence in all interactions and transactions
+          conducted through Shop Shuttle.
+        </p>
+      </section>
+    </main>
+
+   <%- include('partials/footer'); -%>

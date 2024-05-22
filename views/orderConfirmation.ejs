@@ -1,0 +1,33 @@
+
+    <%- include('partials/header'); -%>
+
+    <h1 class="text-center text-4xl font-bold mt-5">Order Confirmation</h1>
+    <div class="flex flex-col justify-center items-center">
+        <h2 class="text-2xl">Order ID: <%= order.orderId %></h2>
+        <table class="">
+            <thead class="p-4">
+                <tr class="flex gap-3 p-4">
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody class="p-4">
+                <% order.items.forEach(item => { %>
+                    <tr class="flex gap-3 bg-gray-200 my-2">
+                        <td class="font-bold text-blue-500"><%= item.item.name %></td>
+                        <td><%= item.item.price %></td>
+                        <td><%= item.quantity %></td>
+                        <td><%= item.item.price * item.quantity %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <p class="text-blue-600 font-bold mt-2 border border-gray-200 p-2">Order Total: <span class="text-black">Rs. <%= order.total %></span></p>
+        <a href="/menu" class="mt-2 bg-indigo-700 hover:bg-blue-500 text-white px-5 py-2 rounded-lg">Back to Menu</a>
+    </div>
+
+    <div class="fixed bottom-0 w-full">
+        <%- include('partials/footer'); -%>
+    
